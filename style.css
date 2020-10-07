@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --main-purple: #5E81F4;
+    --main-light-purple: #F5F5FB;
+    --main-cyan: #0CC3E7;
+    --main-orange: #FFAE33;
+    --main-black: #011F3B;
+    --main-grey: #768492;
+
+    --secondary-purple: #C7CADD;
+    --secondary-light-purple: #EEF2FD;
+    --secondary-light-cyan: #D3F4FB;
+    --secondary-light-orange: #FFEFD6;
+    --secondary-grey: #8DA1B5;
+}
+
+body {
+    height: 100vh;
+
+    margin: 0;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+main, aside {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+main {
+    height: 100%;
+
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+
+    background-color: var(--main-light-purple);
+
+    box-sizing: border-box;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+}
+
+aside:first-of-type {
+    justify-content: space-between;
+}
+
+aside:last-of-type {
+    height: 100%;
+
+    padding-left: 1.25rem;
+    padding-right: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    gap: 3rem;
+
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    color: var(--main-black);
+}
+
+ul {
+    margin: 0;
+
+    list-style: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.25fr;
+}
+
+.logo-container {
+    /* margin-bottom: 3rem; */
+
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.75rem;
+
+    background-color: var(--main-purple);
+
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.logo-title {
+    padding-left: 1rem;
+
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--main-purple);
+}
+
+.btn-simple, .btn-primary, .btn-secondary {
+    border: none;
+
+    background-color: transparent;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary, .btn-secondary {
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    font-weight: 600;
+    color: white;
+}
+
+.btn-primary {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border-radius: 0.6rem;
+
+    background-color: var(--main-purple);
+
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    padding-left: 18px;
+    padding-right: 14px;
+
+    border-radius: 0.5rem;
+
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.site-navigation {
+    padding-left: 2.5rem;
+
+    font-weight: 600;
+}
+
+.site-navigation li {
+    margin-top: 1rem;
+}
+
+.site-navigation li:first-child {
+    margin-top: 0;
+}
+
+.site-navigation a {
+    padding: 1rem 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.site-navigation a svg {
+    padding-right: 1.5rem;
+}
+
+.site-navigation a:active {
+    color: var(--main-black);
+}
+
+.site-navigation a:visited {
+    color: var(--secondary-grey);
+}
+
+.site-navigation a.active {
+    border-right: 3px solid var(--main-purple);
+
+    color: var(--main-black);
+}
+
+.site-navigation a.active svg *[stroke] {
+    stroke: var(--main-purple);
+}
+
+.upgrade-block {
+    height: auto;
+    max-width: 90%;
+
+    position: relative;
+    box-sizing: border-box;
+
+    padding: 4rem 2rem 2rem 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-self: center;
+
+    border-radius: 0.75rem;
+
+    background-color: var(--main-light-purple);
+
+    text-align: center;
+    font-weight: 500;
+    color: var(--secondary-grey);
+}
+
+.upgrade-block img {
+    position: absolute;
+    top: -25%;
+}
+
+.upgrade-block span {
+    padding-bottom: 1rem;
+}
+
+main > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    width: 30%;
+
+    padding: 1rem 1.5rem; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.6rem;
+
+    background-color: white;
+}
+
+.search input {
+    width: 100%;
+
+    margin-left: 0.5rem;
+
+    border: none;
+
+    font-size: 0.9rem;
+    color: var(--main-black);
+
+    outline: none;
+}
+
+.search input::placeholder {
+    color: var(--secondary-purple);
+}
+
+.page-navigation ul {
+    display: flex;
+
+    font-weight: 600;
+}
+
+.page-navigation ul li {
+    margin-left: 3rem;
+}
+
+.page-navigation a {
+    position: relative;
+}
+
+.page-navigation a:active {
+    color: var(--main-black);
+}
+
+.page-navigation a:visited {
+    color: var(--secondary-grey);
+}
+
+.page-navigation a.active {
+    color: var(--main-purple);
+}
+
+.page-navigation a.active::before {
+    content: '';
+
+    width: 16px;
+    height: 2px;
+
+    position: absolute;
+    bottom: -6px;
+    left: calc(50% - 8px);
+
+    background-color: var(--main-purple);
+}
+
+.courses-container {
+    display: grid;
+    flex-grow: 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5fr 5fr;
+    gap: 2.5rem;
+}
+
+.courses-container > div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.course-card {
+    height: 100%;
+
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 0.6rem;
+
+    background-size: cover;
+
+    box-sizing: border-box;
+}
+
+.course-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.course-header p {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+
+    font-size: 1.5rem;
+}
+
+.course-header span {
+    opacity: 0.8;
+}
+
+.course-header span:first-child {
+    font-size: 1.1rem;
+}
+
+.course-card[data-img="purple"] {
+    background-image: url('/assets/images/purple.jpg');
+}
+
+.course-card[data-img="cyan"] {
+    background-image: url('/assets/images/cyan.jpg');
+}
+
+.course-card[data-img="yellow"] {
+    background-image: url('/assets/images/yellow.jpg');
+}
+
+.profile-user {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 56px;
+    height: 56px;
+
+    border-radius: 0.8rem;
+
+    background-color: var(--main-purple);
+}
+
+.profile-user p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.info-container[data-info-type="tasks"] {
+    grid-template-columns: 0.5fr 3fr;
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.4rem;
+}
+
+.info-description p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-weight: 600;
+}
+
+.info-description span {
+    font-size: 0.8rem;
+    color: var(--secondary-grey);
+}
+
+.info-container progress {
+    width: 100%;
+    height: 0.5rem;
+    appearance: none;
+}
+
+.info-container progress::-webkit-progress-bar {
+    border: none;
+    border-radius: 5rem;
+    background-color: white;
+}
+
+.info-container progress::-webkit-progress-value {
+    border-radius: 5rem;
+    background-color: white;
+}
+
+.info-container#purple__info .info-icon {
+    background-color: var(--secondary-light-purple);
+    color: var(--main-purple);
+}
+
+.info-container#purple__info progress::-webkit-progress-bar {
+    background-color: var(--secondary-light-purple);
+}
+
+.info-container#purple__info progress::-webkit-progress-value {
+    background-color: var(--main-purple);
+}
+
+.info-container#cyan__info .info-icon {
+    background-color: var(--secondary-light-cyan);
+    color: var(--main-cyan);
+}
+
+.info-container#cyan__info progress::-webkit-progress-bar {
+    background-color: var(--secondary-light-cyan);
+}
+
+.info-container#cyan__info progress::-webkit-progress-value {
+    background-color: var(--main-cyan);
+}
+
+.info-container#orange__info .info-icon {
+    background-color: var(--secondary-light-orange);
+    color: var(--main-orange);
+}
+
+.info-container#orange__info progress::-webkit-progress-bar {
+    background-color: var(--secondary-light-orange);
+}
+
+.info-container#orange__info progress::-webkit-progress-value {
+    background-color: var(--main-orange);
+}
+
+.adv-container {
+    position: relative;
+}
+
+.adv-description {
+    padding: 1.5rem;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.adv-description p {
+    margin-top: 0;
+
+    font-weight: 600;
+}
+
+.adv-description button {
+    width: 40px;
+    height: 40px;
+
+    margin-right: 1rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 5rem;
+
+    background-color: white;
+
+    cursor: pointer;
+}
